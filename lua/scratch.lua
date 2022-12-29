@@ -6,3 +6,4 @@ setlocal buftype=nofile
 setlocal bufhidden=hide
 endfunction
 ]], false)
+vim.keymap.set("n", "<leader>S", ":call Scratch()<CR>")

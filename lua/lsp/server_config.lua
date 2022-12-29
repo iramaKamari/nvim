@@ -1,6 +1,8 @@
 local M = {}
 -- Lsp settings
 M.lsp = require('lspconfig')
+require("mason").setup()
+require("mason-lspconfig").setup()
 M.capabilities = require('cmp_nvim_lsp').default_capabilities()
 local signs = { Error = '✘', Warn = '▲', Hint = '⚑', Info = '' }
 for type, icon in pairs(signs) do

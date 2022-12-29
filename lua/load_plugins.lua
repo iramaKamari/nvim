@@ -1,15 +1,41 @@
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "--single-branch",
+    "https://github.com/folke/lazy.nvim.git",
+    lazypath,
+  })
+end
+vim.opt.runtimepath:prepend(lazypath)
+
+-- Nvim settings
+require("keymappings")
+require("options")
+
 -- Plugins
-require "paq" {
-	"savq/paq-nvim";
+require("lazy").setup({
 	-- PlantUML
 	"aklt/plantuml-syntax";
 	"tyru/open-browser.vim";
 	"weirongxu/plantuml-previewer.vim";
-	{"iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end };
+	{"iamcco/markdown-preview.nvim", build = function() vim.fn["mkdp#util#install"]() end };
 	-- LSP
 	"neovim/nvim-lspconfig";
 	"simrat39/rust-tools.nvim";
+	"williamboman/mason.nvim";
+	"williamboman/mason-lspconfig.nvim";
+	-- Rust lsp extension
+	"Saecki/crates.nvim";
+	"nvim-lua/plenary.nvim"; -- Required by crates.nvim
+	-- C/C++ lsp extension
 	"p00f/clangd_extensions.nvim";
+	-- DAP
+	"mfussenegger/nvim-dap";
+    "theHamsta/nvim-dap-virtual-text";
+	"jbyuki/one-small-step-for-vimkind";
 	-- Completion
 	"hrsh7th/nvim-cmp";
 	"hrsh7th/cmp-nvim-lsp";
@@ -19,33 +45,26 @@ require "paq" {
 	"hrsh7th/cmp-cmdline";
 	"hrsh7th/cmp-nvim-lsp-signature-help";
 	"ray-x/cmp-treesitter";
-	---- Rust
-	"Saecki/crates.nvim";
-	"nvim-lua/plenary.nvim"; -- Required by crates.nvim
 	-- Snippets
 	"L3MON4D3/LuaSnip";
 	"saadparwaiz1/cmp_luasnip";
 	"rafamadriz/friendly-snippets";
 	-- Fuzzy finding of files/buffers etc
-	{ "junegunn/fzf", run = "./install --bin" };
+	{ "junegunn/fzf", build = "./install --bin" };
 	{ "ibhagwan/fzf-lua", branch = "main" };
 	-- Different color for selected search match
 	"PeterRincker/vim-searchlight";
 	-- Better quickfix list
 	"kevinhwang91/nvim-bqf";
 	-- Syntax highlighters
-	{ "nvim-treesitter/nvim-treesitter", run = function() vim.cmd "TSUpdate" end };
+	{ "nvim-treesitter/nvim-treesitter", build = function() vim.cmd "TSUpdate" end };
 	"nvim-treesitter/playground";
 	"frazrepo/vim-rainbow";
 	"ChristianChiarulli/nvcode-color-schemes.vim";
 	"chrisbra/Colorizer";
 	-- Ergonomics
 	"folke/zen-mode.nvim";
-}
-
--- Nvim settings
-require("keymappings")
-require("options")
+})
 
 -- Plugin settings
 require("better_quick_fix_settings")

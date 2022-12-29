@@ -90,7 +90,6 @@ cmp.setup({
 				menu = ({
 					buffer = "[Buffer]",
 					nvim_lsp = "[LSP]",
-					nvim_lsp_signature_help = "[LSPSH]",
 					treesitter = "[Tree]",
 					path = "[Path]",
 					crates = "[Crates]",

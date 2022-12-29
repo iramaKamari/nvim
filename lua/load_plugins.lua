@@ -2,9 +2,9 @@
 require "paq" {
 	"savq/paq-nvim";
 	-- PlantUML
-	"aklt/plantuml-syntax",
-	"tyru/open-browser.vim",
-	"weirongxu/plantuml-previewer.vim",
+	"aklt/plantuml-syntax";
+	"tyru/open-browser.vim";
+	"weirongxu/plantuml-previewer.vim";
 	-- LSP
 	"neovim/nvim-lspconfig";
 	"simrat39/rust-tools.nvim";
@@ -22,9 +22,9 @@ require "paq" {
 	"Saecki/crates.nvim";
 	"nvim-lua/plenary.nvim"; -- Required by crates.nvim
 	-- Snippets
-	"L3MON4D3/LuaSnip",
-	"saadparwaiz1/cmp_luasnip",
-	"rafamadriz/friendly-snippets",
+	"L3MON4D3/LuaSnip";
+	"saadparwaiz1/cmp_luasnip";
+	"rafamadriz/friendly-snippets";
 	-- Fuzzy finding of files/buffers etc
 	{ "junegunn/fzf", run = "./install --bin" };
 	{ "ibhagwan/fzf-lua", branch = "main" };

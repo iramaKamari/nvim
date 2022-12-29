@@ -41,9 +41,6 @@ require "paq" {
 	"chrisbra/Colorizer";
 	-- Ergonomics
 	"folke/zen-mode.nvim";
-	-- Tpope
-	"tpope/vim-surround";
-	"tpope/vim-repeat";
 }
 
 -- Nvim settings

@@ -2,7 +2,7 @@ local fzf = require("fzf-lua")
 local actions = require "fzf-lua.actions"
 local keymap_opts = { noremap = true, silent = false }
 vim.keymap.set('n', '§', function() fzf.buffers() end, keymap_opts)
-vim.keymap.set('n', '<leader>g', function() fzf.grep() end, keymap_opts)
+vim.keymap.set('n', '<leader>g', function() fzf.live_grep() end, keymap_opts)
 vim.keymap.set('n', '<leader>G', function() fzf.grep_cword() end, keymap_opts)
 vim.keymap.set("n", "<leader>e", ':FzfLua<space>', keymap_opts)
 keymap_opts.silent = true

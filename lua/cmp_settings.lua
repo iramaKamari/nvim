@@ -73,7 +73,7 @@ cmp.setup({
 		{ name = 'treesitter' },
 		{ name = 'luasnip' },
 		{ name = 'buffer' },
-		{ name = 'path' },
+		{ name = 'path', keyword_length = 0 },
 		{ name = 'crates' },
 	}, {
 	}),

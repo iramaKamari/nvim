@@ -5,6 +5,7 @@ require "paq" {
 	"aklt/plantuml-syntax";
 	"tyru/open-browser.vim";
 	"weirongxu/plantuml-previewer.vim";
+	{"iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end };
 	-- LSP
 	"neovim/nvim-lspconfig";
 	"simrat39/rust-tools.nvim";
@@ -50,7 +51,6 @@ require("keymappings")
 require("options")
 
 -- Plugin settings
-require("plantuml_settings")
 require("better_quick_fix_settings")
 require("cmp_settings")
 require("fzf_settings")

@@ -10,6 +10,9 @@ require "paq" {
 	"neovim/nvim-lspconfig";
 	"simrat39/rust-tools.nvim";
 	"p00f/clangd_extensions.nvim";
+	-- Debuging
+	"mfussenegger/nvim-dap";
+	"theHamsta/nvim-dap-virtual-text";
 	-- Completion
 	"hrsh7th/nvim-cmp";
 	"hrsh7th/cmp-nvim-lsp";
@@ -19,7 +22,7 @@ require "paq" {
 	"hrsh7th/cmp-cmdline";
 	"hrsh7th/cmp-nvim-lsp-signature-help";
 	"ray-x/cmp-treesitter";
-	---- Rust
+	-- Rust
 	"Saecki/crates.nvim";
 	"nvim-lua/plenary.nvim"; -- Required by crates.nvim
 	-- Snippets
@@ -56,6 +59,7 @@ require("zen_mode_settings")
 
 -- Lazy load LSP servers
 require("lsp.load_server")
+require("lsp.dap_settings")
 
 -- Syntax, colorScheme settings
 require("nvim_treesitter_settings")

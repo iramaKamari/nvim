@@ -44,6 +44,7 @@ require "paq" {
 	"chrisbra/Colorizer";
 	-- Ergonomics
 	"folke/zen-mode.nvim";
+	"tpope/vim-fugitive";
 }
 
 -- Nvim settings

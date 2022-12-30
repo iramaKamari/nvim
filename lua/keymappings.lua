@@ -32,12 +32,6 @@ vim.api.nvim_set_keymap('n', '<leader><space>', ':nohlsearch<CR>', { noremap = t
 vim.api.nvim_set_keymap('c', '$t', '<CR>:t\'\'<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('c', '$m', '<CR>:m\'\'<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('c', '$d', '<CR>:d<CR>``', { noremap = true, silent = true })
--- Tig in own tab
-vim.api.nvim_set_keymap('', '<leader>l', ':-tab split<CR> :terminal tig %<Return>i', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('', '<leader>B', ':-tab split<CR> :terminal tig blame +<C-r>=line(\'.\')<Return> %<Return>i',
-	{ noremap = true, silent = true })
-vim.api.nvim_set_keymap('', '<leader>V', ':-tab split<CR> :terminal git checkout -p %<Return>i',
-	{ noremap = true, silent = true })
 -- Open a ZSH terminal
 vim.api.nvim_set_keymap('n', '<leader>t', ':terminal zsh<CR>', { noremap = true, silent = true })
 -- Normal mode in terminal

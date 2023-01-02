@@ -20,7 +20,7 @@ vim.api.nvim_command([[set number relativenumber]])
 vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
 vim.opt.undofile = true
 vim.opt.isfname:append("@-@")
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 3
 
 -- Buffer settings
 vim.api.nvim_buf_set_option(0, 'textwidth', 0)

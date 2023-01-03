@@ -23,7 +23,7 @@ vim.opt.isfname:append("@-@")
 vim.opt.scrolloff = 3
 --vim.opt.colorcolumn:append("+2")
 vim.api.nvim_exec([[
-autocmd BufEnter * match ColorColumn "\%82v."
+autocmd BufEnter,InsertEnter,InsertLeave * match ColorColumn "\%82v."
 ]], false)
 
 -- Buffer settings

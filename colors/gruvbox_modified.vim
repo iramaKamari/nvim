@@ -41,7 +41,7 @@ hi Error guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Todo guifg=#ebdbb2 ctermfg=223 guibg=NONE ctermbg=NONE gui=bold,italic cterm=bold,italic
 hi Underlined guifg=#cc241d ctermfg=160 gui=underline cterm=underline
 hi Cursor guifg=#b16286 ctermfg=132 guibg=#cc241d ctermbg=160 gui=reverse cterm=reverse
-hi ColorColumn guifg=NONE ctermfg=NONE guibg=#504945 ctermbg=239 gui=NONE cterm=NONE
+hi ColorColumn guifg=#fb4934 ctermfg=203 guibg=NONE ctermbg=NONE gui=bold cterm=bold
 hi CursorLineNr guifg=#d79921 ctermfg=172 guibg=NONE ctermbg=NONE gui=bold cterm=bold
 hi SignColumn guifg=NONE ctermfg=NONE guibg=#282828 ctermbg=235 gui=NONE cterm=NONE
 hi Conceal guifg=#665c54 ctermfg=59 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE

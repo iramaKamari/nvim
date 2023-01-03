@@ -21,9 +21,13 @@ vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
 vim.opt.undofile = true
 vim.opt.isfname:append("@-@")
 vim.opt.scrolloff = 3
+--vim.opt.colorcolumn:append("+2")
+vim.api.nvim_exec([[
+autocmd BufEnter * match ColorColumn "\%82v."
+]], false)
 
 -- Buffer settings
-vim.api.nvim_buf_set_option(0, 'textwidth', 0)
+vim.api.nvim_buf_set_option(0, 'textwidth', 80)
 vim.api.nvim_buf_set_option(0, 'tabstop', 4)
 vim.api.nvim_buf_set_option(0, 'softtabstop', 4)
 vim.api.nvim_buf_set_option(0, 'shiftwidth', 4)

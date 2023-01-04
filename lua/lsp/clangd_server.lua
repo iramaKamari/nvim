@@ -7,7 +7,7 @@ autocmd FileType cpp nnoremap <buffer> <leader>h :ClangdSwitchSourceHeader<CR>
 
 extensions.setup {
     server = {
-        cmd = { 'clangd', '-j=12', '--all-scopes-completion=true', '--background-index=true', '--fallback-style=chromium',
+        cmd = { 'clangd', '-j=12', '--all-scopes-completion=true', '--background-index=true', '--fallback-style=llvm',
             '--header-insertion=iwyu', '--suggest-missing-includes=true' };
         capabilities = settings.capabilities,
         on_attach = settings.on_attach,

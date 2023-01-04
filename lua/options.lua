@@ -28,11 +28,10 @@ autocmd BufEnter,InsertEnter,InsertLeave * match ColorColumn "\%82v."
 
 -- Buffer settings
 vim.api.nvim_buf_set_option(0, 'textwidth', 80)
-vim.api.nvim_buf_set_option(0, 'tabstop', 4)
-vim.api.nvim_buf_set_option(0, 'softtabstop', 4)
-vim.api.nvim_buf_set_option(0, 'shiftwidth', 4)
+vim.api.nvim_buf_set_option(0, 'softtabstop', 2)
+vim.api.nvim_buf_set_option(0, 'shiftwidth', 2)
 vim.api.nvim_buf_set_option(0, 'expandtab', false)
-vim.api.nvim_buf_set_option(0, 'smartindent', true)
+vim.api.nvim_buf_set_option(0, 'cindent', true)
 vim.api.nvim_buf_set_option(0, 'autoindent', true)
 
 vim.api.nvim_exec([[autocmd VimResized * wincmd =]], false)

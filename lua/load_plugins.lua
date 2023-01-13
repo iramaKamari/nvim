@@ -10,6 +10,10 @@ require "paq" {
 	"neovim/nvim-lspconfig";
 	"simrat39/rust-tools.nvim";
 	"p00f/clangd_extensions.nvim";
+	-- Tags
+	"ludovicchabant/vim-gutentags";
+	"skywind3000/gutentags_plus";
+	"preservim/tagbar";
 	-- Debuging
 	"mfussenegger/nvim-dap";
 	"theHamsta/nvim-dap-virtual-text";
@@ -39,7 +43,6 @@ require "paq" {
 	-- Syntax highlighters
 	{ "nvim-treesitter/nvim-treesitter", run = function() vim.cmd "TSUpdate" end };
 	"nvim-treesitter/playground";
-	"frazrepo/vim-rainbow";
 	"ChristianChiarulli/nvcode-color-schemes.vim";
 	"chrisbra/Colorizer";
 	-- Ergonomics
@@ -61,6 +64,7 @@ require("zen_mode_settings")
 -- Lazy load LSP servers
 require("lsp.load_server")
 require("lsp.dap_settings")
+require("tags_settings")
 
 -- Syntax, colorScheme settings
 require("nvim_treesitter_settings")

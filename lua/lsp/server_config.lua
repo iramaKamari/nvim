@@ -10,6 +10,7 @@ end
 M.on_attach = function(_, bufnr)
 	local fzf = require('fzf-lua')
 	vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+	vim.api.nvim_buf_set_option(bufnr, 'tagfunc', 'v:lua.vim.lsp.tagfunc')
 	vim.diagnostic.config({ virtual_text = false })
 
 	-- Mappings.
@@ -32,6 +33,6 @@ M.on_attach = function(_, bufnr)
 	vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 	vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 	vim.keymap.set('n', '<leader>ca', fzf.lsp_code_actions, opts)
-	vim.keymap.set('n', '<leader>cf', function() vim.lsp.buf.formatting { async = true } end, opts)
+	vim.keymap.set('n', '<leader>cf', function() vim.lsp.buf.format { async = true } end, opts)
 end
 return M

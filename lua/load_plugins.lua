@@ -12,7 +12,6 @@ require "paq" {
 	"p00f/clangd_extensions.nvim";
 	-- Tags
 	"ludovicchabant/vim-gutentags";
-	"skywind3000/gutentags_plus";
 	"preservim/tagbar";
 	-- Debuging
 	"mfussenegger/nvim-dap";

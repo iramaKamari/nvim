@@ -12,7 +12,6 @@ require "paq" {
 	"p00f/clangd_extensions.nvim";
 	-- Tags
 	"ludovicchabant/vim-gutentags";
-	"preservim/tagbar";
 	-- Debuging
 	"mfussenegger/nvim-dap";
 	"theHamsta/nvim-dap-virtual-text";

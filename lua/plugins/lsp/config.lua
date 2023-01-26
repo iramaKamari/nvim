@@ -1,20 +1,20 @@
 local M = {}
 -- Lsp settings
-M.lsp = require('lspconfig')
-M.capabilities = require('cmp_nvim_lsp').default_capabilities()
 local signs = { Error = '✘', Warn = '▲', Hint = '⚑', Info = '' }
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
+M.buffer = -1
+M.lsp = require("lspconfig")
+M.capabilities = require('cmp_nvim_lsp').default_capabilities()
 M.on_attach = function(_, bufnr)
+    M.buffer = bufnr
 	local fzf = require('fzf-lua')
+	local opts = { noremap = true, silent = true, buffer = bufnr }
 	vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 	vim.api.nvim_buf_set_option(bufnr, 'tagfunc', 'v:lua.vim.lsp.tagfunc')
 	vim.diagnostic.config({ virtual_text = false })
-
-	-- Mappings.
-	local opts = { noremap = true, silent = true, buffer = bufnr }
 	vim.keymap.set('n', 'gD', fzf.lsp_declarations, opts)
 	vim.keymap.set('n', 'gd', fzf.lsp_definitions, opts)
 	vim.keymap.set('n', 'gr', fzf.lsp_references, opts)

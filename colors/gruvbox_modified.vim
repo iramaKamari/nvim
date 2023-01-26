@@ -1,9 +1,12 @@
 " Maintainer: Tobias Grundel <tobias.grundel@hotmail.com>
 
-set background=none
 hi clear
 if exists('syntax_on')
   syntax reset
+endif
+if (has("termguicolors"))
+    set termguicolors
+    hi LineNr ctermbg=NONE guibg=NONE
 endif
 let g:colors_name='tg'
 

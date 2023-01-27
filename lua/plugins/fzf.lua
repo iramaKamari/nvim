@@ -4,7 +4,7 @@ return {
 
 
   keys = {
-	{ "§", function() require("fzf-lua").buffers() end, keymap_opts },
+	{ "<leader>b", function() require("fzf-lua").buffers() end, keymap_opts },
 	{ "<leader>g", function() require("fzf-lua").live_grep() end, keymap_opts },
 	{ "<leader>G", function() require("fzf-lua").grep_cword() end, keymap_opts },
 	{ "<leader>e", ":FzfLua<space>", keymap_opts },

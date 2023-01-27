@@ -13,7 +13,7 @@ vim.o.foldcolumn = "0"
 
 vim.opt.termguicolors = true
 vim.opt.autoread = true
-vim.opt.guicursor = ""
+--vim.opt.guicursor = ""
 vim.opt.lazyredraw = true
 vim.opt.showmatch = true
 vim.opt.complete = '.,w,b,u,t'

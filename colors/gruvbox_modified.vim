@@ -11,15 +11,17 @@ endif
 let g:colors_name='tg'
 
 hi Normal guifg=#ebdbb2 ctermfg=223 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi Comment guifg=#665c54 ctermfg=59 guibg=NONE ctermbg=NONE gui=italic cterm=italic
+hi Comment guifg=#7c6f64 ctermfg=59 guibg=NONE ctermbg=NONE gui=italic cterm=italic
+"hi Comment guifg=#665c54 ctermfg=59 guibg=NONE ctermbg=NONE gui=italic cterm=italic
 hi Constant guifg=#d3869b ctermfg=175 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi String guifg=#98971a ctermfg=100 guibg=NONE ctermbg=NONE gui=italic cterm=italic
+hi String guifg=#b8bb26 ctermfg=101 guibg=NONE ctermbg=NONE gui=italic cterm=italic
+"hi String guifg=#98971a ctermfg=100 guibg=NONE ctermbg=NONE gui=italic cterm=italic
 hi Character guifg=#d3869b ctermfg=175 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Number guifg=#d3869b ctermfg=175 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Boolean guifg=#d3869b ctermfg=175 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Float guifg=#d3869b ctermfg=175 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Identifier guifg=#83a598 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi Function guifg=#b8bb26 ctermfg=142 guibg=NONE ctermbg=NONE gui=bold cterm=bold
+hi Function guifg=#fe8019 ctermfg=142 guibg=NONE ctermbg=NONE gui=bold cterm=bold
 hi Statement guifg=#b16286 ctermfg=132 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Conditional guifg=#b16286 ctermfg=132 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Repeat guifg=#b16286 ctermfg=132 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -140,9 +142,9 @@ hi TSFloat guifg=#fabd2f ctermfg=214 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi TSAnnotation guifg=#d79921 ctermfg=172 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi TSAttribute guifg=#d65d0e ctermfg=166 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi TSNamespace guifg=#83a598 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi TSFuncBuiltin guifg=#d79921 ctermfg=172 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi TSFunction guifg=#d79921 ctermfg=172 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi TSFuncMacro guifg=#d79921 ctermfg=172 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi TSFuncBuiltin guifg=#fe8019 ctermfg=172 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi TSFunction guifg=#fe8019 ctermfg=172 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi TSFuncMacro guifg=#fe8019 ctermfg=172 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi TSParameter guifg=#83a598 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi TSParameterReference guifg=#83a598 ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi TSMethod guifg=#d79921 ctermfg=172 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE

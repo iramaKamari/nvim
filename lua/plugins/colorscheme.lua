@@ -4,7 +4,7 @@ return {
         lazy = false,
         priority = 1000,
         config = function()
-            --vim.cmd([[syntax on]])
+            vim.cmd([[syntax on]])
             vim.cmd([[silent! colorscheme gruvbox_modified]])
         end,
     },
@@ -19,5 +19,10 @@ return {
 	    --vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	    --vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
         --end
+    },
+    {
+       'norcalli/nvim-colorizer.lua',
+        name = 'colorizer',
+        config = true,
     },
 }

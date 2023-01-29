@@ -43,18 +43,18 @@ function M.init()
         require("dap").repl.open()
     end, { desc = "Repl" })
 
-    vim.fn.sign_define('DapBreakpoint', { text = 'B', texthl = 'TSAttribute', linehl = '', numhl = '' })
-    vim.fn.sign_define('DapBreakpointCondition', { text = 'C', texthl = 'TSNumber', linehl = '', numhl = '' })
-    vim.fn.sign_define('DapLogpoint', { text = 'L', texthl = 'TSFunction', linehl = '', numhl = '' })
-    vim.fn.sign_define('DapBreakpointRejected', { text = 'R', texthl = 'TSConstant', linehl = '', numhl = '' })
-    vim.fn.sign_define('DapStopped', { text = '➜', texthl = '', linehl = 'Normal', numhl = '' })
+    vim.fn.sign_define("DapBreakpoint", { text = "B", texthl = "TSAttribute", linehl = "", numhl = "" })
+    vim.fn.sign_define("DapBreakpointCondition", { text = "C", texthl = "TSNumber", linehl = "", numhl = "" })
+    vim.fn.sign_define("DapLogpoint", { text = "L", texthl = "TSFunction", linehl = "", numhl = "" })
+    vim.fn.sign_define("DapBreakpointRejected", { text = "R", texthl = "TSConstant", linehl = "", numhl = "" })
+    vim.fn.sign_define("DapStopped", { text = "➜", texthl = "", linehl = "Normal", numhl = "" })
 end
 
 function M.config()
-    local dap = require('dap')
+    local dap = require("dap")
     dap.adapters.cppdbg = {
-        id = 'cppdbg',
-        type = 'executable',
+        id = "cppdbg",
+        type = "executable",
         command = "/home/tobias/.cpptools/extension/debugAdapters/bin/OpenDebugAD7",
     }
     dap.configurations.cpp = {
@@ -63,28 +63,28 @@ function M.config()
             type = "cppdbg",
             request = "launch",
             program = function()
-                return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+                return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
             end,
-            cwd = '${workspaceFolder}',
+            cwd = "${workspaceFolder}",
             stopAtEntry = true,
             setupCommands = {
                 {
-                    text = '-enable-pretty-printing',
-                    description = 'enable pretty printing',
+                    text = "-enable-pretty-printing",
+                    description = "enable pretty printing",
                     ignoreFailures = false
                 },
             },
         },
         {
-            name = 'Attach to gdb',
-            type = 'cppdbg',
-            request = 'launch',
-            MIMode = 'gdb',
-            --miDebuggerServerAddress = 'localhost:1234',
-            miDebuggerPath = '/usr/bin/gdb',
-            cwd = '${workspaceFolder}',
+            name = "Attach to gdb",
+            type = "cppdbg",
+            request = "launch",
+            MIMode = "gdb",
+            --miDebuggerServerAddress = "localhost:1234",
+            miDebuggerPath = "/usr/bin/gdb",
+            cwd = "${workspaceFolder}",
             program = function()
-                return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+                return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
             end,
         },
     }

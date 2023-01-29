@@ -78,12 +78,12 @@ return {
 							fallback()
 						end
 					end, { "i", "s" }),
-					['<C-l>'] = cmp.mapping(function(fallback)
+					["<C-l>"] = cmp.mapping(function(fallback)
 						if cmp.visible() then
 							return cmp.complete_common_string()
 						end
 						fallback()
-					end, { 'i', 'c' }),
+					end, { "i", "c" }),
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
@@ -144,32 +144,32 @@ return {
 			local cmp = require("cmp")
 			require("cmp").setup(opts)
 			-- Set configuration for specific filetype.
-			require("cmp").setup.filetype('gitcommit', {
+			require("cmp").setup.filetype("gitcommit", {
 				sources = require("cmp").config.sources({
-					{ name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
+					{ name = "cmp_git" }, -- You can specify the `cmp_git` source if you were installed it.
 				}, {
-					{ name = 'buffer' },
+					{ name = "buffer" },
 				})
 			})
 
-			-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
-			require("cmp").setup.cmdline({ '/', '?' }, {
+			-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won"t work anymore).
+			require("cmp").setup.cmdline({ "/", "?" }, {
 				mapping = cmp.mapping.preset.cmdline(),
 				sources = {
-					{ name = 'buffer' }
+					{ name = "buffer" }
 				},
 				view = {
-					entries = { name = 'wildmenu', separator = '|' }
+					entries = { name = "wildmenu", separator = "|" }
 				},
 			})
 
-			-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-			require("cmp").setup.cmdline(':', {
+			-- Use cmdline & path source for ":" (if you enabled `native_menu`, this won"t work anymore).
+			require("cmp").setup.cmdline(":", {
 				mapping = cmp.mapping.preset.cmdline(),
 				sources = cmp.config.sources({
-					{ name = 'path' }
+					{ name = "path" }
 				}, {
-					{ name = 'cmdline' }
+					{ name = "cmdline" }
 				})
 			})
 		end,
@@ -188,7 +188,7 @@ return {
 	{
 		"echasnovski/mini.surround",
 		--keys = function(plugin, keys)
-		--  -- Populate the keys based on the user's options
+		--  -- Populate the keys based on the user"s options
 		--  local opts = require("lazy.core.plugin").values(plugin, "opts", false)
 		--  local mappings = {
 		--    { opts.mappings.add, desc = "Add surrounding", mode = { "n", "v" } },

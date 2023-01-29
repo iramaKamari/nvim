@@ -1,31 +1,31 @@
 local Metatable = {}
 
 local Colors = {
-	dark = '#000000',
-	dark_soft = '#3c3836',
-	gray = '#928374',
-	light = '#fbf1c7',
-	red = '#fb4934',
-	green = '#b8bb26',
-	yellow = '#fabd2f',
-	blue = '#83a598',
-	purple = '#d3869b',
-	aqua = '#8ec07c',
-	orange = '#fe8019',
+	dark = "#000000",
+	dark_soft = "#3c3836",
+	gray = "#928374",
+	light = "#fbf1c7",
+	red = "#fb4934",
+	green = "#b8bb26",
+	yellow = "#fabd2f",
+	blue = "#83a598",
+	purple = "#d3869b",
+	aqua = "#8ec07c",
+	orange = "#fe8019",
 }
-vim.api.nvim_command('hi DarkFg guifg=' .. Colors.dark)
-vim.api.nvim_command('hi GrayFg guifg=' .. Colors.gray)
-vim.api.nvim_command('hi GrayBg gui=' .. 'BOLD' .. ' guifg=' .. Colors.dark_soft .. ' guibg=NONE')
-vim.api.nvim_command('hi LightFg guifg=' .. Colors.light)
-vim.api.nvim_command('hi RedFg guifg=' .. Colors.red)
-vim.api.nvim_command('hi RedBg guifg=' .. Colors.dark .. ' guibg=' .. Colors.red)
-vim.api.nvim_command('hi GreenFg guifg=' .. Colors.green)
-vim.api.nvim_command('hi YellowFg guifg=' .. Colors.yellow)
-vim.api.nvim_command('hi BlueFg guifg=' .. Colors.blue)
-vim.api.nvim_command('hi PurpleFg guifg=' .. Colors.purple)
-vim.api.nvim_command('hi AquaFg guifg=' .. Colors.aqua)
-vim.api.nvim_command('hi OrangeFg guifg=' .. Colors.orange)
-vim.api.nvim_command('hi Blank guifg=' .. 'NONE' .. ' guibg=' .. 'NONE')
+vim.api.nvim_command("hi DarkFg guifg=" .. Colors.dark)
+vim.api.nvim_command("hi GrayFg guifg=" .. Colors.gray)
+vim.api.nvim_command("hi GrayBg gui=" .. "BOLD" .. " guifg=" .. Colors.dark_soft .. " guibg=NONE")
+vim.api.nvim_command("hi LightFg guifg=" .. Colors.light)
+vim.api.nvim_command("hi RedFg guifg=" .. Colors.red)
+vim.api.nvim_command("hi RedBg guifg=" .. Colors.dark .. " guibg=" .. Colors.red)
+vim.api.nvim_command("hi GreenFg guifg=" .. Colors.green)
+vim.api.nvim_command("hi YellowFg guifg=" .. Colors.yellow)
+vim.api.nvim_command("hi BlueFg guifg=" .. Colors.blue)
+vim.api.nvim_command("hi PurpleFg guifg=" .. Colors.purple)
+vim.api.nvim_command("hi AquaFg guifg=" .. Colors.aqua)
+vim.api.nvim_command("hi OrangeFg guifg=" .. Colors.orange)
+vim.api.nvim_command("hi Blank guifg=" .. "NONE" .. " guibg=" .. "NONE")
 
 Metatable.highlights = {
 	darkFg = "%#DarkFg#",
@@ -43,10 +43,10 @@ Metatable.highlights = {
 }
 
 Metatable.file_position = function()
-	local total_lines = vim.fn.line('$')
-	local current_line = vim.fn.line('.')
+	local total_lines = vim.fn.line("$")
+	local current_line = vim.fn.line(".")
 	local position = current_line / total_lines
-	return string.format("%s%s", math.floor(100*position), '%%')
+	return string.format("%s%s", math.floor(100*position), "%%")
 end
 
 Metatable.trunc_width = setmetatable({
@@ -102,8 +102,8 @@ end
 
 Metatable.get_modifiable = function(self)
 	local modifiable = ""
-	--if vim.api.nvim_buf_get_option(0, 'readonly')
-	--or not vim.api.nvim_buf_get_option(0, 'modifiable') then
+	--if vim.api.nvim_buf_get_option(0, "readonly")
+	--or not vim.api.nvim_buf_get_option(0, "modifiable") then
 	if vim.bo.readonly then
 		modifiable = self.highlights.redFg .. " "
 	end
@@ -115,7 +115,7 @@ Metatable.get_filename = function()
 end
 
 Metatable.get_filetype_and_size = function()
-	local file_size = vim.fn.getfsize(vim.fn.expand('%:p'))
+	local file_size = vim.fn.getfsize(vim.fn.expand("%:p"))
 	local size_text = "B"
 	if file_size >= 1024 then
 		file_size =  file_size/1024
@@ -129,11 +129,11 @@ Metatable.get_filetype_and_size = function()
 end
 
 Metatable.get_encoding_and_fileformat = function()
-	local encoding = vim.api.nvim_buf_get_option(0, 'fenc') and
-	vim.api.nvim_get_option('enc') or
-	vim.api.nvim_buf_get_option(0, 'fenc')
+	local encoding = vim.api.nvim_buf_get_option(0, "fenc") and
+	vim.api.nvim_get_option("enc") or
+	vim.api.nvim_buf_get_option(0, "fenc")
 	return  "[" .. encoding  .. " " ..
-		vim.api.nvim_buf_get_option(0, 'ff') .. "]"
+		vim.api.nvim_buf_get_option(0, "ff") .. "]"
 end
 
 Metatable.set_active = function(self)

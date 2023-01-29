@@ -16,9 +16,9 @@ vim.opt.autoread = true
 --vim.opt.guicursor = ""
 vim.opt.lazyredraw = true
 vim.opt.showmatch = true
-vim.opt.complete = '.,w,b,u,t'
-vim.opt.completeopt = 'menu,menuone,noselect,noinsert'
-vim.opt.wildmode = 'longest:full,full'
+vim.opt.complete = ".,w,b,u,t"
+vim.opt.completeopt = "menu,menuone,noselect,noinsert"
+vim.opt.wildmode = "longest:full,full"
 vim.opt.formatoptions = "jcroqlnt"
 
 vim.cmd([[set signcolumn=number]])

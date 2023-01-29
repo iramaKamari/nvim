@@ -49,21 +49,26 @@ vim.api.nvim_exec([[hi ExtraWhitespace ctermbg=124 guibg=#cc241d]], false)
 -- Highlight leading whitespace
 vim.keymap.set('n', '<leader>i', '/^\\s\\+/<CR>', { noremap = true, silent = true })
 -- Highlight trailing whitespace
-vim.keymap.set('n', '<leader>T', ':call TrimWhitespace()<CR>', { noremap = true, silent = false })
-vim.api.nvim_exec([[
-match ExtraWhitespace /\s\+$/
-autocmd BufEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufLeave,TermOpen * call clearmatches()
-]], false)
+--vim.keymap.set('n', '<leader>T', ':call TrimWhitespace()<CR>', { noremap = true, silent = false })
+-- vim.api.nvim_exec([[
+-- match ExtraWhitespace /\s\+$/
+-- autocmd BufEnter * match ExtraWhitespace /\s\+$/
+-- autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+-- autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+-- autocmd BufLeave,TermOpen * call clearmatches()
+-- ]], false)
 -- Trim trailing whitespace
 vim.api.nvim_exec([[
-fun! TrimWhitespace()
-let l:save = winsaveview()
-%s/\s\+$//e
-call winrestview(l:save)
-endfun
+    fun! TrimWhitespace()
+        let l:save = winsaveview()
+        %s/\s\+$//e
+        call winrestview(l:save)
+    endfun
+
+    augroup TrimOnSave
+        autocmd!
+        autocmd BufWritePre * call TrimWhitespace()
+    augroup END
 ]], false)
 
 -- Zoom/Restore window

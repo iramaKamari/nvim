@@ -43,8 +43,6 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { noremap = true, silent = true })
 -- Save
 vim.keymap.set("n", "<leader>s", ":w<CR>", { noremap = true, silent = true })
--- Lexplore
-vim.keymap.set("n", "<leader>l", vim.cmd.Lexplore, { noremap = true, silent = true })
 
 -- Whitespace
 --vim.api.nvim_exec([[hi ExtraWhitespace ctermbg=124 guibg=#cc241d]], false)

@@ -91,7 +91,7 @@ hi WarningMsg guifg=#d79921 ctermfg=172 guibg=NONE ctermbg=NONE gui=NONE cterm=N
 hi WildMenu guifg=#d65d0e ctermfg=166 guibg=NONE ctermbg=NONE gui=bold cterm=bold
 hi WinSeparator guifg=#bdae93 ctermfg=144 guibg=NONE ctermbg=NONE gui=bold cterm=bold
 hi EndOfBuffer guifg=#282828 ctermfg=235 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi Searchlight guifg=#d65d0e ctermfg=166 guibg=#282828 ctermbg=235 gui=reverse cterm=reverse
+hi Searchlight guifg=#282828  ctermfg=235 guibg=#d65d0e ctermbg=166 gui=bold cterm=bold
 hi CmpItemAbbr guifg=#ebdbb2 ctermfg=223 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi CmpItemAbbrDeprecated guifg=#ebdbb2 ctermfg=223 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi CmpItemAbbrMatch guifg=#d65d0e ctermfg=166 guibg=NONE ctermbg=NONE gui=bold cterm=bold
@@ -125,7 +125,6 @@ hi CmpItemKindVariable guifg=#d79921 ctermfg=172 guibg=NONE ctermbg=NONE gui=NON
 hi CmpItemKindBoolean guifg=#d79921 ctermfg=172 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi CmpItemKindObject guifg=#b16286 ctermfg=132 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi TSError guifg=#fb4934 ctermfg=203 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi link TSIdentifier Identifier
 hi TSPunctDelimiter guifg=#ebdbb2 ctermfg=223 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi TSPunctBracket guifg=#ebdbb2 ctermfg=223 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi TSPunctSpecial guifg=#ebdbb2 ctermfg=223 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE

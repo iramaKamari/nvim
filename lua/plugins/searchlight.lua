@@ -1,0 +1,3 @@
+return {
+    "PeterRincker/vim-searchlight",
+}
